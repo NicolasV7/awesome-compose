@@ -7,4 +7,7 @@ services:
     working_dir: /app
     command: node app.js
     ports:
-      - 8080
+      - target: 8080
+        published: 0 
+        protocol: tcp
+        mode: host
