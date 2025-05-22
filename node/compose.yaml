@@ -1,13 +1,11 @@
-version: '3.7'
 services:
   app:
-    image: node:18
+    build: .
     volumes:
       - ./app:/app
     working_dir: /app
-    command: node app.js
     ports:
       - target: 8080
-        published: 0 
+        published: 0
         protocol: tcp
         mode: host
